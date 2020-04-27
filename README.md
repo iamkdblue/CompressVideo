@@ -1,41 +1,43 @@
-# VideoCompressor
+# CompressVideo
 A High-performance video compressor for Android using Hardware decoding and encoding API(MediaCodec).
+
+# Motivation
+I tried many Video compressor as expected some are not working and outdated ,some are working but not maintaing video resolutions
 
 ## Demo
 ![Demo](/pic/Demo.gif)
 
 ## Usage
 ### Call compressVideoLow, compressVideoMedium and compressVideoHigh that indicates 3 quality of compressing.
-        VideoCompressTask task = VideoCompress.compressVideoLow(tv_input.getText().toString(), destPath, new VideoCompress.CompressListener() {
-                    @Override
-                    public void onStart() {
-                        //Start Compress
-                    }
+        VideoCompress.compressVideoLow(String srcPath, String destPath, new VideoCompress.CompressListener() {
+            @Override
+            public void onStart() {
+                //Start Compress
+            }
 
-                    @Override
-                    public void onSuccess() {
-                        //Finish successfully
-                    }
+            @Override
+            public void onSuccess(String compressVideoPath) {
+                //Finish successfully
+            }
 
-                    @Override
-                    public void onFail() {
-                        //Failed
-                    }
+            @Override
+            public void onFail() {
+                //Failed
+            }
 
-                    @Override
-                    public void onProgress(float percent) {
-                        //Progress
-                    }
-                });
+            @Override
+            public void onProgress(float percent) {
+                //Progress
+            }
+        });
 
 ## Performance
-You can find some test results in pic/test_reports.
 
-I compress a video which is 168MB(00:01:06). 
+I compress a video which is 2.62MB(00:0:12).
 
-And it took 1 minute for compressing.
+And it took 8 seconds for compressing.
 
-The result of compressing is 11MB. 
+The result of compressing is 479KB.
 
 So it's a great job by MediaCodec :) .
 

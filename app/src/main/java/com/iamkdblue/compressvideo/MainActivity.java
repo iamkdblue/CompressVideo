@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void askForPermission() {
+
         Dexter.withActivity(this)
                 .withPermissions(
                         Manifest.permission.WRITE_EXTERNAL_STORAGE,
