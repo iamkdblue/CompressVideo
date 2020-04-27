@@ -5,7 +5,7 @@ A High-performance video compressor for Android using Hardware decoding and enco
 I tried many Video compressor as expected some are not working and outdated ,some are working but not maintaing video resolutions
 
 ## Demo
-![Demo](/pic/Demo.gif)
+![Demo](/pic/demo.gif)
 
 ## Usage
 ### Call compressVideoLow, compressVideoMedium and compressVideoHigh that indicates 3 quality of compressing.
